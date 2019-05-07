@@ -16,8 +16,13 @@ public class Main2Activity extends AppCompatActivity {
         //1 : Lấy dữ liệu dạng chuỗi
         Intent intent = getIntent();
         if(intent != null){
-            String chuoi = intent.getStringExtra("chuoi");
-            Log.d("BBB",chuoi);
+            if(intent.hasExtra("chuoi")){
+                String chuoi = intent.getStringExtra("chuoi");
+                Log.d("BBB",chuoi);
+            }else{
+                Log.d("BBB","Sai từ khóa");
+            }
+
         }
     }
 }
