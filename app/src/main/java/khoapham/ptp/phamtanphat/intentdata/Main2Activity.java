@@ -13,15 +13,15 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         //1 : Lấy dữ liệu dạng chuỗi
-//        Intent intent = getIntent();
-//        if(intent != null){
-//            if(intent.hasExtra("chuoi")){
-//                String chuoi = intent.getStringExtra("chuoi");
-//                Log.d("BBB",chuoi);
-//            }else{
-//                Log.d("BBB","Sai từ khóa");
-//            }
-//        }
+        Intent intent = getIntent();
+        if(intent != null){
+            if(intent.hasExtra("chuoi")){
+                String chuoi = intent.getStringExtra("chuoi");
+                Log.d("BBB",chuoi);
+            }else{
+                Log.d("BBB","Sai từ khóa");
+            }
+        }
         //2 : Lấy dữ liệu dạng integer
 //        Intent intent = getIntent();
 //        if(intent != null){
@@ -33,14 +33,14 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        }
         //3 : Lấy dữ dạng Array
-        Intent intent = getIntent();
-        if(intent != null){
-            if(intent.hasExtra("array")){
-                String[] arraystring = intent.getStringArrayExtra("array");
-                Log.d("BBB",arraystring.length + "");
-            }else{
-                Log.d("BBB","Sai từ khóa");
-            }
-        }
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("array")){
+//                String[] arraystring = intent.getStringArrayExtra("array");
+//                Log.d("BBB",arraystring.length + "");
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
     }
 }

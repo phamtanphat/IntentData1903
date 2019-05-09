@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnIntentString,btnIntenInteger,btnIntentArray;
@@ -14,9 +16,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //instanceof <=> === kiểm tra kiểu dữ liệu
+        // (Object) => type casting trong java
         btnIntentString = findViewById(R.id.buttonIntentString);
         btnIntenInteger = findViewById(R.id.buttonIntentInteger);
         btnIntentArray = findViewById(R.id.buttonIntentArray);
+
 
         //1 : Gửi dữ liệu dạng chuỗi
         btnIntentString.setOnClickListener(new View.OnClickListener() {
@@ -43,8 +48,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("array",mangten);
                 startActivity(intent);
-
             }
         });
     }
+    //generic
+//    public <T> void senData(String key , T value ){
+//        Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+//        if (value instanceof ArrayList<?> ){
+//            if (value instanceof String)
+////            Type casting
+//            intent.putExtra(key,(String) value);
+//        }
+//
+//        startActivity(intent);
+//    }
 }
