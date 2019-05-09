@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 mangthucung.add(new Animal("Cá"));
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("arraylistobject",mangthucung);
+                intent.putExtra("chuoi","hello");
                 startActivity(intent);
             }
         });

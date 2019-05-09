@@ -56,14 +56,20 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        }
         //5 : Lấy dữ liệu dạng Mảng object
-//        Intent intent = getIntent();
-//        if(intent != null){
-//            if(intent.hasExtra("arraylistobject")){
-//                ArrayList<Animal> animals =  intent.getParcelableArrayListExtra("arraylistobject");
-//                Log.d("BBB", animals.size() + "");
-//            }else{
-//                Log.d("BBB","Sai từ khóa");
-//            }
-//        }
+        Intent intent = getIntent();
+        if(intent != null){
+            if(intent.hasExtra("arraylistobject")){
+                ArrayList<Animal> animals =  intent.getParcelableArrayListExtra("arraylistobject");
+                Log.d("BBB", animals.size() + "");
+            }else{
+                Log.d("BBB","Sai từ khóa");
+            }
+            if(intent.hasExtra("chuoi")){
+                String chuoi = intent.getStringExtra("chuoi");
+                Log.d("BBB", chuoi);
+            }else{
+                Log.d("BBB","Sai từ khóa");
+            }
+        }
     }
 }
