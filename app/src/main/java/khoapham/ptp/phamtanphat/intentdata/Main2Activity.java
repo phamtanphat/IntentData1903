@@ -1,9 +1,12 @@
 package khoapham.ptp.phamtanphat.intentdata;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -43,14 +46,24 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        }
         //4 : Lấy dữ liệu dạng object
-        Intent intent = getIntent();
-        if(intent != null){
-            if(intent.hasExtra("object")){
-                Person person = (Person) intent.getSerializableExtra("object");
-                Log.d("BBB",person.ten + "");
-            }else{
-                Log.d("BBB","Sai từ khóa");
-            }
-        }
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("object")){
+//                Person person = (Person) intent.getSerializableExtra("object");
+//                Log.d("BBB",person.ten + "");
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
+        //5 : Lấy dữ liệu dạng Mảng object
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("arraylistobject")){
+//                ArrayList<Animal> animals =  intent.getParcelableArrayListExtra("arraylistobject");
+//                Log.d("BBB", animals.size() + "");
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
     }
 }

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnIntentString,btnIntenInteger,btnIntentArray,btnIntentObject;
+    Button btnIntentString,btnIntenInteger,btnIntentArray,btnIntentObject,btnIntentArraylistobject;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnIntenInteger = findViewById(R.id.buttonIntentInteger);
         btnIntentArray = findViewById(R.id.buttonIntentArray);
         btnIntentObject = findViewById(R.id.buttonIntentObject);
+        btnIntentArraylistobject = findViewById(R.id.buttonIntentArraylistObject);
 
 
         //1 : Gửi dữ liệu dạng chuỗi
@@ -59,6 +60,19 @@ public class MainActivity extends AppCompatActivity {
                 Person person1 = new Person("Nguyen Van A");
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("object", (Serializable) person1);
+                startActivity(intent);
+            }
+        });
+        btnIntentArraylistobject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ArrayList<Animal> mangthucung = new ArrayList<>();
+                mangthucung.add(new Animal("Mèo"));
+                mangthucung.add(new Animal("Chó"));
+                mangthucung.add(new Animal("Hưu"));
+                mangthucung.add(new Animal("Cá"));
+                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                intent.putExtra("arraylistobject",mangthucung);
                 startActivity(intent);
             }
         });
