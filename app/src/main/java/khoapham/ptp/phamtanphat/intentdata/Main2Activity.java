@@ -13,11 +13,21 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         //1 : Lấy dữ liệu dạng chuỗi
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("chuoi")){
+//                String chuoi = intent.getStringExtra("chuoi");
+//                Log.d("BBB",chuoi);
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
+        //2 : Lấy dữ liệu dạng integer
         Intent intent = getIntent();
         if(intent != null){
-            if(intent.hasExtra("chuoi")){
-                String chuoi = intent.getStringExtra("chuoi");
-                Log.d("BBB",chuoi);
+            if(intent.hasExtra("so")){
+                Integer so = intent.getIntExtra("s",Integer.MIN_VALUE);
+                Log.d("BBB",so + "");
             }else{
                 Log.d("BBB","Sai từ khóa");
             }
