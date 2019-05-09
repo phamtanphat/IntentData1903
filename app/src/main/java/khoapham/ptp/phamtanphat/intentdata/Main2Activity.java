@@ -13,15 +13,15 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         //1 : Lấy dữ liệu dạng chuỗi
-        Intent intent = getIntent();
-        if(intent != null){
-            if(intent.hasExtra("chuoi")){
-                String chuoi = intent.getStringExtra("chuoi");
-                Log.d("BBB",chuoi);
-            }else{
-                Log.d("BBB","Sai từ khóa");
-            }
-        }
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("chuoi")){
+//                String chuoi = intent.getStringExtra("chuoi");
+//                Log.d("BBB",chuoi);
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
         //2 : Lấy dữ liệu dạng integer
 //        Intent intent = getIntent();
 //        if(intent != null){
@@ -42,5 +42,15 @@ public class Main2Activity extends AppCompatActivity {
 //                Log.d("BBB","Sai từ khóa");
 //            }
 //        }
+        //4 : Lấy dữ liệu dạng object
+        Intent intent = getIntent();
+        if(intent != null){
+            if(intent.hasExtra("object")){
+                Person person = (Person) intent.getSerializableExtra("object");
+                Log.d("BBB",person.ten + "");
+            }else{
+                Log.d("BBB","Sai từ khóa");
+            }
+        }
     }
 }

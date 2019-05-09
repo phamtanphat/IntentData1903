@@ -1,11 +1,13 @@
 package khoapham.ptp.phamtanphat.intentdata;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -48,6 +50,15 @@ public class MainActivity extends AppCompatActivity {
                 String[] mangten = {"Toán","Lý","Hóa","Địa"};
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("array",mangten);
+                startActivity(intent);
+            }
+        });
+        btnIntentObject.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Person person1 = new Person("Nguyen Van A");
+                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                intent.putExtra("object", (Serializable) person1);
                 startActivity(intent);
             }
         });
