@@ -24,5 +24,11 @@
         android:id="@+id/buttonIntentArray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/buttonIntentArray"
+        android:text="Intent Object"
+        android:id="@+id/buttonIntentObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>

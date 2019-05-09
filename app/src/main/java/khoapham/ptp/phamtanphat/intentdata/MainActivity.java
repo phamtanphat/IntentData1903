@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnIntentString,btnIntenInteger,btnIntentArray;
+    Button btnIntentString,btnIntenInteger,btnIntentArray,btnIntentObject;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         btnIntentString = findViewById(R.id.buttonIntentString);
         btnIntenInteger = findViewById(R.id.buttonIntentInteger);
         btnIntentArray = findViewById(R.id.buttonIntentArray);
+        btnIntentObject = findViewById(R.id.buttonIntentObject);
 
 
         //1 : Gửi dữ liệu dạng chuỗi
