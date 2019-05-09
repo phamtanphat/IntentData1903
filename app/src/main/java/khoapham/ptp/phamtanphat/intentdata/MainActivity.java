@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnIntentString,btnIntenInteger;
+    Button btnIntentString,btnIntenInteger,btnIntentArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnIntentString = findViewById(R.id.buttonIntentString);
         btnIntenInteger = findViewById(R.id.buttonIntentInteger);
+        btnIntentArray = findViewById(R.id.buttonIntentArray);
 
         //1 : Gửi dữ liệu dạng chuỗi
         btnIntentString.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +34,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("so",-1);
                 startActivity(intent);
+            }
+        });
+        btnIntentArray.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] mangten = {"Toán","Lý","Hóa","Địa"};
+                Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                intent.putExtra("array",mangten);
+                startActivity(intent);
+
             }
         });
     }

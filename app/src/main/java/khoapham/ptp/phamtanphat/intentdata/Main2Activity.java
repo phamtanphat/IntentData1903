@@ -23,11 +23,21 @@ public class Main2Activity extends AppCompatActivity {
 //            }
 //        }
         //2 : Lấy dữ liệu dạng integer
+//        Intent intent = getIntent();
+//        if(intent != null){
+//            if(intent.hasExtra("so")){
+//                Integer so = intent.getIntExtra("s",Integer.MIN_VALUE);
+//                Log.d("BBB",so + "");
+//            }else{
+//                Log.d("BBB","Sai từ khóa");
+//            }
+//        }
+        //3 : Lấy dữ dạng Array
         Intent intent = getIntent();
         if(intent != null){
-            if(intent.hasExtra("so")){
-                Integer so = intent.getIntExtra("s",Integer.MIN_VALUE);
-                Log.d("BBB",so + "");
+            if(intent.hasExtra("array")){
+                String[] arraystring = intent.getStringArrayExtra("array");
+                Log.d("BBB",arraystring.length + "");
             }else{
                 Log.d("BBB","Sai từ khóa");
             }
