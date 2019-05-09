@@ -12,7 +12,6 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-
         //1 : Lấy dữ liệu dạng chuỗi
         Intent intent = getIntent();
         if(intent != null){
@@ -22,7 +21,6 @@ public class Main2Activity extends AppCompatActivity {
             }else{
                 Log.d("BBB","Sai từ khóa");
             }
-
         }
     }
 }

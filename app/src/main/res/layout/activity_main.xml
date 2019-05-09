@@ -12,5 +12,11 @@
         android:id="@+id/buttonIntentString"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/buttonIntentString"
+        android:text="Intent Integer"
+        android:id="@+id/buttonIntentInteger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
